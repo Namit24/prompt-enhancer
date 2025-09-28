@@ -1,7 +1,7 @@
 (function() {
   'use strict';
   
-  console.log('🚀 AI Prompt Enhancer: Content script loaded');
+  console.log('AI Prompt Enhancer: Content script loaded');
   
   let enhanceButton = null;
   let currentTextarea = null;
@@ -34,7 +34,7 @@
   function createEnhanceButton() {
     const button = document.createElement('button');
     button.id = 'ai-prompt-enhancer-btn';
-    button.innerHTML = '✨ Enhance';
+    button.innerHTML = 'Enhance';
     button.title = 'Enhance this prompt with AI';
     
     button.addEventListener('click', async (e) => {
@@ -59,11 +59,11 @@
     
     // Prevent multiple requests
     isEnhancing = true;
-    enhanceButton.innerHTML = '⏳ Enhancing...';
+    enhanceButton.innerHTML = 'Enhancing...';
     enhanceButton.disabled = true;
     
     try {
-      console.log('📡 Sending request...');
+      console.log('Sending request...');
       const startTime = Date.now();
       
       const response = await chrome.runtime.sendMessage({
@@ -72,7 +72,7 @@
       });
       
       const duration = Date.now() - startTime;
-      console.log(`📨 Response received in ${duration}ms`);
+      console.log(`Response received in ${duration}ms`);
       
       if (response.error) {
         throw new Error(response.error);
@@ -80,15 +80,15 @@
       
       if (response.enhanced) {
         setTextContent(currentTextarea, response.enhanced);
-        showNotification(`Enhanced in ${Math.round(duration/1000)}s! ✨`, 'success');
+        showNotification(`Enhanced in ${Math.round(duration/1000)}s!`, 'success');
       }
       
     } catch (error) {
-      console.error('💥 Enhancement error:', error);
+      console.error('Enhancement error:', error);
       showNotification('Enhancement failed. Check backend.', 'error');
     } finally {
       isEnhancing = false;
-      enhanceButton.innerHTML = '✨ Enhance';
+      enhanceButton.innerHTML = ' Enhance';
       enhanceButton.disabled = false;
     }
   }
