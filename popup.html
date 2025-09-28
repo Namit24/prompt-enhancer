@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      width: 300px;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    
+    h2 {
+      margin: 0 0 15px 0;
+      font-size: 18px;
+      color: #333;
+    }
+    
+    p {
+      margin: 10px 0;
+      color: #666;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    
+    .status {
+      padding: 10px;
+      border-radius: 6px;
+      font-size: 14px;
+      margin: 10px 0;
+    }
+    
+    .status.success {
+      background: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    
+    .status.error {
+      background: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+    
+    .instructions {
+      background: #f8f9fa;
+      padding: 15px;
+      border-radius: 6px;
+      border-left: 4px solid #007bff;
+      margin: 15px 0;
+    }
+    
+    .instructions h3 {
+      margin: 0 0 10px 0;
+      font-size: 14px;
+      color: #333;
+    }
+    
+    .instructions ol {
+      margin: 0;
+      padding-left: 20px;
+    }
+    
+    .instructions li {
+      margin: 5px 0;
+      font-size: 13px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h2>✨ AI Prompt Enhancer</h2>
+  
+  <div id="status" class="status">
+    Checking backend connection...
+  </div>
+  
+  <div class="instructions">
+    <h3>How to use:</h3>
+    <ol>
+      <li>Go to ChatGPT or Claude</li>
+      <li>Start typing your prompt</li>
+      <li>Click the "✨ Enhance" button that appears</li>
+      <li>Watch your prompt get enhanced automatically!</li>
+    </ol>
+  </div>
+  
+  <p><strong>Note:</strong> Make sure your backend server is running on localhost:3000</p>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
