@@ -1,7 +1,7 @@
 yo so here's how you setup:
 
 Run this to clone:
-1. git clone https://github.com/Namit24/prompt-enhancer.git
+1. git clone https://github.com/Namit24/better-aurenix.git
 
 2. make a .env file which should include:
 GEMINI_API_KEY=<your key>
@@ -21,3 +21,4 @@ go to claude.ai/new
 click enhance button
 
 6. BOOM done
+
